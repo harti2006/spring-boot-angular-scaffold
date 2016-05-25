@@ -1,0 +1,45 @@
+{
+  "name": "spring-boot-angular2-scaffold",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --watch -d",
+    "dev-server": "webpack-dev-server --content-base src/main/resources/static/ --output-public-path /js/ --hot --inline --history-api-fallback",
+    "prebuild": "npm install",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harti2006/spring-boot-angular2-scaffold.git"
+  },
+  "author": "harti2006",
+  "bugs": {
+    "url": "https://github.com/harti2006/spring-boot-angular2-scaffold/issues"
+  },
+  "homepage": "https://github.com/harti2006/spring-boot-angular2-scaffold#readme",
+  "private": true,
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.1",
+    "@angular/compiler": "2.0.0-rc.1",
+    "@angular/core": "2.0.0-rc.1",
+    "@angular/http": "2.0.0-rc.1",
+    "@angular/platform-browser": "2.0.0-rc.1",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.1",
+    "@angular/router": "2.0.0-rc.1",
+    "@angular/router-deprecated": "2.0.0-rc.1",
+    "css-loader": "^0.23.1",
+    "es6-promise": "^3.1.2",
+    "es6-shim": "^0.35.0",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "style-loader": "^0.13.1",
+    "zone.js": "^0.6.12"
+  },
+  "devDependencies": {
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

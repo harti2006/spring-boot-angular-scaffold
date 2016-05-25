@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: my-app
+
+security:
+  user:
+    name: user
+    password: user
+  sessions: ALWAYS
+  enable-csrf: true

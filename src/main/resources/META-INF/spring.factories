@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.github.harti2006.myapp.config.SecurityConfig,\
+  com.github.harti2006.myapp.config.WebMvcConfig
