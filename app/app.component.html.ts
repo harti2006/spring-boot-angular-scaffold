@@ -9,7 +9,7 @@ export const htmlTemplate = `
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" [routerLink]="['Dashboard']">{{title}}</a>
+      <a class="navbar-brand" [routerLink]="['/dashboard']">{{title}}</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">

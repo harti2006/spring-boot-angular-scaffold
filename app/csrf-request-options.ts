@@ -1,4 +1,4 @@
-import {ReadOnlyRequestOptions} from "./read-only-request-options";
+import {ReadOnlyRequestOptions} from './read-only-request-options';
 
 export class CsrfRequestOptions extends ReadOnlyRequestOptions {
 
@@ -9,8 +9,8 @@ export class CsrfRequestOptions extends ReadOnlyRequestOptions {
 
     static getCookie(name):string {
         return document.cookie
-                .split(";")
-                .map(cookie => cookie.split("=", 2))
+                .split(';')
+                .map(cookie => cookie.split('=', 2))
                 .filter(cookieParts => cookieParts.length === 2 && cookieParts[0] === name)
                 .map(cookieParts => cookieParts[1])
                 .pop() || "";

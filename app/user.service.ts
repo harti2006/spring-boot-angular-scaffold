@@ -29,7 +29,7 @@ export class UserService {
             currentUser: null,
             expiryDate: Date.now()
         };
-        this.currentUser$ = new Observable(observer => this._currentUserObserver = observer).share();
+        this.currentUser$ = new Observable<User>(observer => this._currentUserObserver = observer).share();
     }
 
     fetchCurrentUser():void {

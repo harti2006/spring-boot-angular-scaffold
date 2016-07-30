@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {Router} from "@angular/router-deprecated";
+import {Router} from "@angular/router";
 import {htmlTemplate} from "./login.component.html";
 import {UserService} from "./user.service";
 
@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
     constructor(private _router:Router,
                 private _userService:UserService) {
-        this._userService.currentUser$.subscribe((user) => user === null || this._router.navigate(['Dashboard']))
+        this._userService.currentUser$.subscribe((user) => user === null || this._router.navigate(['/dashboard']));
     }
 
     ngOnInit() {

@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {Router} from "@angular/router-deprecated";
+import {Router} from "@angular/router";
 import {htmlTemplate} from "./dashboard.component.html";
 import {UserService} from "./user.service";
 import {User} from "./user";
@@ -28,6 +28,6 @@ export class DashboardComponent implements OnInit {
 
     private handleUserChange(user:User) {
         this.currentUser = user;
-        this.currentUser || this._router.navigate(["Login"]);
+        this.currentUser || this._router.navigate(["/login"]);
     }
 }
