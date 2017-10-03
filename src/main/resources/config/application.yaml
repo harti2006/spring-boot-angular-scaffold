@@ -1,10 +1,11 @@
 spring:
   application:
     name: my-app
+  data:
+    rest:
+      base-path: "/api"
 
 security:
   user:
-    name: user
-    password: user
-  sessions: ALWAYS
-  enable-csrf: true
+    name: admin
+    password: admin
