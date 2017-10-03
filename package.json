@@ -4,8 +4,8 @@
   "license": "Apache-2.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve --proxy-config proxy.conf.json --base-href /app/",
+    "build": "ng build -prod --base-href /app/ --aot true --build-optimizer -op target/classes/static/app --extract-licenses false",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

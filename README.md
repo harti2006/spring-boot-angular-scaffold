@@ -1,6 +1,6 @@
 # Spring Boot + Angular2 scaffold
 
-This project shows how to build and run an Angular 2 single-page web frontend together with a Spring Boot
+This project shows how to build and run an Angular single-page web frontend together with a Spring Boot
 backend.
 
 ## Build & Run it
@@ -8,19 +8,20 @@ backend.
 ...using:
 
     mvn clean package
-    java -jar target/spring-boot-angular2-scaffold.jar
+      
+    java --add-modules java.xml.bind -jar target/spring-boot-angular2-scaffold.jar
     
 Open http://localhost:8080 in your browser.
 
 ## Development
 
-Run the Webpack Dev-Server:
+Run the Dev-Server:
 
-    npm run dev-server
+    npm start
     
 Run the backend on port 8080. Either using IDE or mvn spring-boot:run
 
-Open http://localhost:8081 in your browser.
+Open http://localhost:4200/app in your browser.
 
 ## Structure
 
@@ -43,7 +44,7 @@ other microservices.
 
 ### /app/**
 
-This is completely managed by the Angular 2 app. All requests will be forwarded to index.html.
+This is managed by the Angular app. All non-asset requests will be forwarded to index.html.
 
 ## CSRF support
 
