@@ -1,10 +1,10 @@
-import {Injectable} from "@angular/core";
-import {Headers, Http, Response} from "@angular/http";
-import {Observable} from "rxjs/Observable";
-import {BehaviorSubject} from "rxjs/BehaviorSubject";
-import "rxjs/add/operator/map";
-import "rxjs/add/operator/catch";
-import "rxjs/add/observable/of";
+import {Injectable} from '@angular/core';
+import {Headers, Http, Response} from '@angular/http';
+import {Observable} from 'rxjs/Observable';
+import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/of';
 
 @Injectable()
 export class UserService {
@@ -28,9 +28,9 @@ export class UserService {
   }
 
   login(username: string, password: string) {
-    let headers = new Headers();
+    const headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
-    let body = "username=" + username + "&password=" + password;
+    const body = 'username=' + username + '&password=' + password;
     return this.http.post(this.loginUrl, body, {headers})
       .map(this.extractUsername)
       .map(this.fanOutUsername.bind(this))

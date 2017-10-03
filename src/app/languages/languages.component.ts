@@ -1,14 +1,14 @@
-import {Component, OnInit} from "@angular/core";
-import {LanguageService} from "./language.service";
-import {Language} from "./language";
-import {UserService} from "../user.service";
+import {Component, OnInit} from '@angular/core';
+import {LanguageService} from './language.service';
+import {Language} from './language';
+import {UserService} from '../user.service';
 
 @Component({
   templateUrl: './languages.component.html'
 })
 export class LanguagesComponent implements OnInit {
   languages: Language[] = [];
-  isLoggedIn: boolean = false;
+  isLoggedIn = false;
   message: string;
 
   constructor(private service: LanguageService,
@@ -35,7 +35,7 @@ export class LanguagesComponent implements OnInit {
     this.service.deleteLanguage(language)
       .subscribe({
         error: (message: string) => this.message = message,
-        complete: () => this.languages = this.languages.filter(x => x != language)
+        complete: () => this.languages = this.languages.filter(x => x !== language)
       });
   }
 
