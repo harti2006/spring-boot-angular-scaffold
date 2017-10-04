@@ -1,0 +1,81 @@
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+@import '../node_modules/font-awesome/scss/font-awesome';
+
+main {
+  @extend .container, .mt-4;
+}
+
+.logInOut {
+  @extend .float-right;
+}
+
+.page-header {
+  @extend .mb-4;
+
+  h1 small {
+    @extend .text-muted
+  }
+}
+
+nav {
+  @extend .mb-4;
+
+  ul {
+    @extend .nav, .nav-pills;
+
+    li {
+      @extend .nav-item;
+
+      a {
+        @extend .nav-link;
+      }
+    }
+  }
+}
+
+.login-form {
+  input {
+    @extend .form-control;
+  }
+
+  button {
+    @extend .btn, .btn-primary;
+  }
+}
+
+.error-message-box {
+  @extend .alert, .alert-danger, .alert-dismissible, .fade, .show;
+}
+
+.new-language-form {
+  @extend .input-group, .mb-4;
+
+  input {
+    @extend .form-control;
+  }
+
+  span {
+    @extend .input-group-btn;
+
+    button {
+      @extend .btn, .btn-primary;
+    }
+  }
+}
+
+.language-list {
+  @extend .list-group;
+
+  li {
+    @extend .list-group-item;
+
+    a {
+      @extend .float-right;
+
+      :hover {
+        color: $link-color;
+      }
+    }
+  }
+}

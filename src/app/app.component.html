@@ -1,0 +1,17 @@
+<main class="container">
+  <div class="logInOut">
+    <a *ngIf="username" (click)="onLogout()">Logout {{username}}</a>
+    <a *ngIf="!username" routerLink="/login">Login</a>
+  </div>
+  <div class="page-header">
+    <h1>Software Projects Manager<br/>
+      <small>An Angular + Spring Example</small>
+    </h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a routerLink="/languages" routerLinkActive="active">Programming Languages</a></li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+</main>

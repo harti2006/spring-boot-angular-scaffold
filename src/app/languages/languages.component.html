@@ -1,0 +1,24 @@
+<h2>Programming languages</h2>
+
+<div *ngIf="message" class="error-message-box" role="alert">
+  <button type="button" class="close" aria-label="Close" (click)="dismissMessage()">
+    <span aria-hidden="true">&times;</span></button>
+  <strong>Error!</strong> <span>{{message}}</span>
+</div>
+
+<div *ngIf="isLoggedIn" class="new-language-form">
+  <input #newLanguage (keyup.enter)="addLanguage(newLanguage.value); newLanguage.value=''"
+         type="text" placeholder="Add language...">
+  <span>
+    <button (click)="addLanguage(newLanguage.value); newLanguage.value=''" type="button">OK</button>
+  </span>
+</div>
+
+<ul class="language-list">
+  <li *ngFor="let language of languages">
+    <a *ngIf="isLoggedIn" (click)="removeLanguage(language)">
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    </a>
+    <span>{{language.name}}</span>
+  </li>
+</ul>
