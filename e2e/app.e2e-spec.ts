@@ -7,8 +7,8 @@ describe('spring-boot-angular2-scaffold App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display title message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toContain('Software Projects Manager');
   });
 });

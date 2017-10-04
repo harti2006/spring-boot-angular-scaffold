@@ -35,7 +35,7 @@ describe('AppComponent', () => {
   it('should render title in a h1 tag', async(() => {
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Software Projects Mngr');
+    expect(compiled.querySelector('h1').textContent).toContain('Software Projects Manager');
   }));
 });
 
