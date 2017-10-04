@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('spring-boot-angular2-scaffold App', () => {
+describe('spring-boot-angular-scaffold App', () => {
   let page: AppPage;
 
   beforeEach(() => {

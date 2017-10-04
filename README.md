@@ -1,4 +1,4 @@
-# Spring Boot + Angular2 scaffold
+# Spring Boot + Angular scaffold
 
 This project shows how to build and run an Angular single-page web frontend together with a Spring Boot
 backend.
@@ -9,7 +9,7 @@ backend.
 
     mvn clean package
       
-    java --add-modules java.xml.bind -jar target/spring-boot-angular2-scaffold.jar
+    java --add-modules java.xml.bind -jar target/spring-boot-angular-scaffold.jar
     
 Open http://localhost:8080 in your browser.
 

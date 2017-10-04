@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "spring-boot-angular2-scaffold"
+    "name": "spring-boot-angular-scaffold"
   },
   "apps": [
     {
