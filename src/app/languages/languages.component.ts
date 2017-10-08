@@ -2,14 +2,15 @@ import {Component, OnInit} from '@angular/core';
 import {LanguageService} from './language.service';
 import {Language} from './language';
 import {UserService} from '../user.service';
+import {Observable} from "rxjs/Observable";
 
 @Component({
   templateUrl: './languages.component.html'
 })
 export class LanguagesComponent implements OnInit {
   languages: Language[] = [];
-  isLoggedIn = false;
   message: string;
+  isLoggedIn$: Observable<boolean>;
 
   constructor(private service: LanguageService,
               private userService: UserService) {
@@ -19,8 +20,7 @@ export class LanguagesComponent implements OnInit {
     this.service.getLanguages()
       .subscribe(languages => this.languages = languages);
 
-    this.userService.getCurrentUser()
-      .subscribe(username => this.isLoggedIn = !!username);
+    this.isLoggedIn$ = this.userService.user$.map(user => !!user);
   }
 
   addLanguage(name: string): void {

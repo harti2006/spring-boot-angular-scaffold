@@ -13,7 +13,7 @@ export class LoginComponent {
   }
 
   onSubmit(): void {
-    this.userService.login(this.username, this.password)
-      .subscribe(_ => this.router.navigateByUrl(''));
+    this.userService.login(this.username, this.password);
+    // .subscribe(_ => this.router.navigateByUrl(''));
   }
 }
