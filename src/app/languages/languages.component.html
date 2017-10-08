@@ -15,7 +15,7 @@
 </div>
 
 <ul class="language-list">
-  <li *ngFor="let language of languages">
+  <li *ngFor="let language of (languages$ | async)">
     <a *ngIf="isLoggedIn$ | async" (click)="removeLanguage(language)">
       <i class="fa fa-trash" aria-hidden="true"></i>
     </a>

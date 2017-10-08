@@ -4,11 +4,12 @@ import {Language} from './language';
 import {UserService} from '../user.service';
 import {Observable} from "rxjs/Observable";
 
+
 @Component({
   templateUrl: './languages.component.html'
 })
 export class LanguagesComponent implements OnInit {
-  languages: Language[] = [];
+  languages$: Observable<Language[]>;
   message: string;
   isLoggedIn$: Observable<boolean>;
 
@@ -17,26 +18,16 @@ export class LanguagesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.service.getLanguages()
-      .subscribe(languages => this.languages = languages);
-
+    this.languages$ = this.service.languages$;
     this.isLoggedIn$ = this.userService.user$.map(user => !!user);
   }
 
   addLanguage(name: string): void {
-    this.service.createLanguage(name)
-      .subscribe(
-        (language: Language) => this.languages.push(language),
-        (message: string) => this.message = message
-      );
+    this.service.createLanguage(name);
   }
 
   removeLanguage(language: Language): void {
-    this.service.deleteLanguage(language)
-      .subscribe({
-        error: (message: string) => this.message = message,
-        complete: () => this.languages = this.languages.filter(x => x !== language)
-      });
+    this.service.deleteLanguage(language);
   }
 
   dismissMessage(): void {
