@@ -6,7 +6,7 @@
   <strong>Error!</strong> <span>{{message}}</span>
 </div>
 
-<div *ngIf="isLoggedIn" class="new-language-form">
+<div *ngIf="isLoggedIn$ | async" class="new-language-form">
   <input #newLanguage (keyup.enter)="addLanguage(newLanguage.value); newLanguage.value=''"
          type="text" placeholder="Add language...">
   <span>
@@ -15,8 +15,8 @@
 </div>
 
 <ul class="language-list">
-  <li *ngFor="let language of languages">
-    <a *ngIf="isLoggedIn" (click)="removeLanguage(language)">
+  <li *ngFor="let language of (languages$ | async)">
+    <a *ngIf="isLoggedIn$ | async" (click)="removeLanguage(language)">
       <i class="fa fa-trash" aria-hidden="true"></i>
     </a>
     <span>{{language.name}}</span>
