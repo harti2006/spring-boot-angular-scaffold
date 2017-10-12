@@ -5,9 +5,9 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/ignoreElements';
-import {Store} from "@ngrx/store";
-import {AppState} from "../core/store/index";
-import * as Languages from '../core/store/languages/languages.actions'
+import {Store} from '@ngrx/store';
+import {AppState} from '../core/store/index';
+import * as Languages from '../core/store/languages/languages.actions';
 
 @Injectable()
 export class LanguageService {
@@ -25,7 +25,7 @@ export class LanguageService {
     this.http.get(this.languagesUrl)
       .map(this.extractLanguages)
       .catch(this.handleError)
-      .subscribe(languages => this.store.dispatch(new Languages.Set(languages)))
+      .subscribe(languages => this.store.dispatch(new Languages.Set(languages)));
   }
 
   getLanguages(): Observable<Language[]> {
@@ -40,14 +40,14 @@ export class LanguageService {
     this.http.post(this.languagesUrl, JSON.stringify({name}), {headers})
       .catch(this.handleError)
       .map(res => res.json())
-      .subscribe((language: Language) => this.store.dispatch(new Languages.Add(language)))
+      .subscribe((language: Language) => this.store.dispatch(new Languages.Add(language)));
   }
 
   deleteLanguage(language: Language): void {
     this.http.delete(language._links.self.href)
       .catch(this.handleError)
       .ignoreElements()
-      .subscribe({complete: () => this.store.dispatch(new Languages.Remove(language))})
+      .subscribe({complete: () => this.store.dispatch(new Languages.Remove(language))});
   }
 
   private extractLanguages(res: Response): Language[] {

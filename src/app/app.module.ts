@@ -7,7 +7,7 @@ import {appRoutingProviders, routing} from './app.routing';
 import {LanguagesModule} from './languages/languages.module';
 import {UserService} from './user.service';
 import {LoginComponent} from './login/login.component';
-import {CoreModule} from "./core/index";
+import {CoreModule} from './core/index';
 
 @NgModule({
   imports: [

@@ -4,8 +4,8 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/of';
-import {Store} from "@ngrx/store";
-import {AppState} from "./core/store";
+import {Store} from '@ngrx/store';
+import {AppState} from './core/store';
 import * as User from './core/store/user/user.actions';
 
 @Injectable()
@@ -35,8 +35,8 @@ export class UserService {
     this.http.post(this.loginUrl, body, {headers})
       .map(this.extractUsername)
       .subscribe(
-        username => this.storeUser(username),
-        err => this.handleError(err))
+        name => this.storeUser(name),
+        err => this.handleError(err));
   }
 
   logout(): void {

@@ -1,5 +1,5 @@
 import * as LanguagesActions from './languages.actions';
-import {Language} from "../../../languages/language";
+import {Language} from '../../../languages/language';
 
 export type Action = LanguagesActions.All;
 

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {LanguageService} from './language.service';
 import {Language} from './language';
 import {UserService} from '../user.service';
-import {Observable} from "rxjs/Observable";
+import {Observable} from 'rxjs/Observable';
 
 
 @Component({

@@ -1,5 +1,5 @@
-import {Action} from "@ngrx/store";
-import {Language} from "../../../languages/language";
+import {Action} from '@ngrx/store';
+import {Language} from '../../../languages/language';
 
 export const SET = '[Languages] SET';
 export const ADD = '[Languages] ADD';
