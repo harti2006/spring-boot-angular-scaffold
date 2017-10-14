@@ -20,7 +20,7 @@
 
         <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
         <node.version>v8.7.0</node.version>
-        <npm.version>5.4.2</npm.version>
+        <npm.version>5.5.1</npm.version>
     </properties>
 
     <scm>
@@ -58,7 +58,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>23.1-jre</version>
+            <version>23.2-jre</version>
         </dependency>
     </dependencies>
 
