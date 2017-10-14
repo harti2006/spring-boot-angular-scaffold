@@ -1,6 +1,6 @@
 @import "variables";
 @import "~bootstrap/scss/bootstrap";
-@import '../node_modules/font-awesome/scss/font-awesome';
+@import '~font-awesome/scss/font-awesome';
 
 main {
   @extend .container, .mt-4;
